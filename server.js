@@ -9,19 +9,28 @@ app.use(express.static('public')); // Serve static files from the public directo
 
 // Sample data for taxis
 const taxis = [
-  { id: 1, name: 'Taxi 1', location: 'A' },
-  { id: 2, name: 'Taxi 2', location: 'B' },
-  { id: 3, name: 'Taxi 3', location: 'C' }
+  { id: 1, name: 'Taxi 1', location: 'NITK' },
+  { id: 2, name: 'Taxi 2', location: 'Mangalore City Center' },
+  { id: 3, name: 'Taxi 3', location: 'Kudroli Gokarnath Temple' },
 ];
 
-// Graph structure for Dijkstra's algorithm
+// Graph structure for Dijkstra's algorithm with distances in kilometers
 const graph = {
-  A: { B: 5, D: 7 },
-  B: { A: 5, D: 3, C: 4 },
-  C: { B: 4, E: 6 },
-  D: { A: 7, B: 3, F: 8 },
-  E: { C: 6, F: 5 },
-  F: { D: 8, E: 5 }
+  'NITK': { 'Mangalore City Center': 17, 'Surathkal Beach': 2, 'Panambur Beach': 4 },
+  'Mangalore City Center': { 'NITK': 17, 'Kudroli Gokarnath Temple': 3, 'Milagres Church': 2 },
+  'Panambur Beach': { 'NITK': 4, 'Tannirbhavi Beach': 6 },
+  'Tannirbhavi Beach': { 'Panambur Beach': 6, 'Mangalore Beach': 9 },
+  'Surathkal Beach': { 'NITK': 2 },
+  'Someshwara Beach': { 'Mangalore City Center': 13 },
+  'Mangalore Beach': { 'Tannirbhavi Beach': 9 },
+  'Mangaladevi Temple': { 'Mangalore City Center': 8 },
+  'Kudroli Gokarnath Temple': { 'Mangalore City Center': 3 },
+  'Kadri Manjunath Temple': { 'Mangalore City Center': 5 },
+  'Sultan Battery': { 'Mangalore City Center': 4 },
+  'Polali Rajarajeshwari Temple': { 'Mangalore City Center': 16 },
+  'St. Aloysius Chapel': { 'Mangalore City Center': 2 },
+  'Rosario Cathedral': { 'Mangalore City Center': 2 },
+  'Milagres Church': { 'Mangalore City Center': 2 },
 };
 
 // Endpoint to get list of taxis

@@ -1,42 +1,94 @@
+/* Base Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/* Container for the entire content */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Header */
+h1 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Labels for dropdowns */
+label {
+  display: block;
+  font-size: 16px;
+  color: #555;
+  margin-top: 15px;
+}
+
+/* Dropdown styling */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Book Taxi Button */
+button {
+  width: 100%;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Map styling */
+#map {
+  height: 500px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Result text */
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #007bff;
+  text-align: center;
+}
+
+/* Media Query for smaller devices */
+@media only screen and (max-width: 600px) {
   .container {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
   }
-  
+
   h1 {
     font-size: 24px;
-    margin-bottom: 20px;
   }
-  
-  label, select, button {
-    display: block;
-    margin-top: 10px;
+
+  button {
+    font-size: 16px;
+    padding: 10px;
   }
-  
-  #map {
-    height: 500px;
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-  
-  #previous {
-    margin-top: 20px;
-  }
-  
+}

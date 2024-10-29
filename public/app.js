@@ -1,16 +1,25 @@
-const map = L.map('map').setView([20.5937, 78.9629], 5);  // Centered in India
+const map = L.map('map').setView([12.9141, 74.8560], 13);  // Centered in Mangalore
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
 }).addTo(map);
 
-// Coordinates for nodes (A to F)
+// Coordinates for Mangalore locations
 const nodeCoordinates = {
-  'A': [22.5726, 88.3639],   // Kolkata
-  'B': [28.7041, 77.1025],   // Delhi
-  'C': [19.0760, 72.8777],   // Mumbai
-  'D': [13.0827, 80.2707],   // Chennai
-  'E': [12.9716, 77.5946],   // Bangalore
-  'F': [25.3176, 82.9739]    // Varanasi
+  'NITK': [13.0105121, 74.7937911],
+  'Mangalore City Center': [12.91723, 74.85603],
+  'Panambur Beach': [12.8472, 74.8642],
+  'Tannirbhavi Beach': [12.89846, 74.81242],
+  'Someshwara Beach': [12.8753, 74.8142],
+  'Surathkal Beach': [12.980712, 74.803145],
+  'Mangalore Beach': [12.91723, 74.85603],
+  'Mangaladevi Temple': [12.85627, 74.83952],
+  'Kudroli Gokarnath Temple': [12.876046, 74.831726],
+  'Kadri Manjunath Temple': [12.885778,74.855583],
+  'Sultan Battery': [12.8753, 74.8433],
+  'Polali Rajarajeshwari Temple': [12.933954, 74.955291],
+  'St. Aloysius Chapel': [12.873611, 74.845278],
+  'Rosario Cathedral': [-32.9442426 , -60.650538799],
+  'Milagres Church': [12.86686, 74.84437],
 };
 
 const markers = {};
